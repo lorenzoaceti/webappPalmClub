@@ -1,0 +1,66 @@
+{% load static %}
+<div id="fale-conosco" class="container">
+    		<h1 class="titulo secundario">Fale com a gente</h1>
+    		<h2>Reservas, envio de material de artistas, crítica e sugestões, aniversários e eventos. Responderemos em até 48h.</h2>
+
+    		<div class="row"><!-- INICIO conteudo fale com a gente -->
+
+    			<div id="formulario" class="col-sm-12 col-md-6"><!-- INICIO Formulario -->
+    				<form id="contato" method="post" action="{% url 'index' %}">
+						{% csrf_token %}
+	    				<input class="form-control" type="text" id="nome" name="nome" placeholder="Nome" required>
+
+	    				<input class="form-control" type="email" id="email" name="email" placeholder="E-mail" required>
+
+	    				<div class="row"><!-- INICIO Cel, UF, Cidade -->
+	    					<div class="col-sm-12 col-md-5">
+	    						<input class="form-control" type="number" maxlength="15" id="celular" name="celular" placeholder="Cel" required>
+	    					</div>
+
+	    					<div class="col-sm-12 col-md-3">
+	    						<input class="form-control" type="text" maxlength="2" id="estado" name="estado" placeholder="UF" required>
+	    					</div>
+
+	    					<div class="col-sm-12 col-md-4">
+	    						<input class="form-control" type="text" id="cidade" name="cidade" maxlength="30" placeholder="Cidade" required>
+	    					</div>
+
+	    				</div><!-- FIM Cel, UF, Cidade -->
+
+	    				<div class="row"><!-- INICIO Sexo, Data de Nascimento -->
+	    					<div class="col-sm-12 col-md-5">
+	    						<select class="form-control" id="sexo" name="sexo">
+	    							<option>Sexo</option>
+	    							<option>Masculino</option>
+	    							<option>Feminino</option>
+	    						</select>
+	    					</div>
+
+	    					<div class="col-sm-12 col-md-7">
+	    						<input class="form-control" type="date" name="data" id="data">
+	    					</div>
+	    				</div><!-- FIM Sexo, Data de Nascimento -->
+
+	    				<textarea class="form-control" id="mensagem" name="mensagem" maxlength="1000" wrap="hard" placeholder="Digite sua mensagem"></textarea>
+
+	    				<div class="row d-flex justify-content-start">
+	    					<div class="col-md-12 col-lg-5 col-xl-4">
+	    						<input class="form-control" type="submit" id="enviar" value="Enviar">
+	    					</div>
+	    					<div class="d-none d-md-block col-lg-5 col-xl-4">
+	    						<input class="form-control" type="reset" id="limpar" value="Limpar">
+	    					</div>
+	    				</div>
+    				</form>
+    			</div><!-- FIM Formulario -->
+
+    			<div id="mapa" class="col-md-6"><!-- INICIO mapa -->
+    				<h2>ESTRADA FRANCISCO DA CRUZ NUNES, 2012</h2>
+    				<h2>JACARÉ, NITERÓI, RJ</h2>
+    				<iframe class="mt-3" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.4432701720348!2d-43.067440884417955!3d-22.933896744605974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99868584c8df2b%3A0xd9308ec544108c4a!2sPalm%20Club!5e0!3m2!1spt-BR!2sbr!4v1584679126911!5m2!1spt-BR!2sbr" width="100%" height="60%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+    			</div><!-- FIM mapa -->
+
+    		</div><!-- FIM conteudo fale com a gente -->
+
+    	</div>

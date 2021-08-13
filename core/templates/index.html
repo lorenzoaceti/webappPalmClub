@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+		<!-- INICIO Home -->
+			{% include 'home.html' %}
+		<!-- FIM Home -->
+
+    	<img src="{% static 'img/divisoria.png' %}" class="img-fluid d-none d-md-block divisoria ml-auto mr-auto mt-5">
+
+		<!-- INICIO Próximos Eventos -->
+			{% include 'eventos.html' %}
+		<!-- FIM Próximos Eventos -->
+
+    	<img src="{% static 'img/img_sobre.jpg' %}" id="imagem-historia" class="d-none d-lg-block w-100 img-fluid position-absolute">
+
+    	<!-- INICIO Nossa História-->
+			{% include 'historia.html' %}
+		<!-- FIM Nossa História-->
+
+    	<img src="{% static 'img/divisoria.png' %}" class="divisoria d-block ml-auto mr-auto mt-5 mb-5">
+
+		<!-- INICIO Espaço -->
+    		{% include 'espaco.html' %}}
+		<!-- FIM Espaço -->
+
+    	<img src="{% static 'img/divisoria.png' %}" class="divisoria d-block ml-auto mr-auto mt-5 mb-5">
+
+		<!-- INICIO Fale com a gente -->
+    		{% include 'contato.html' %}
+		<!-- FIM Fale com a gente -->
+
+		<!-- INICIO Footer -->
+    		{% include 'footer.html' %}
+		<!-- FIM Footer -->
+{% endblock %}

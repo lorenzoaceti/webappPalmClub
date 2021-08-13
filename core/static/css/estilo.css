@@ -1,0 +1,608 @@
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) { 
+	.convidado, .convidados, .convidado-principal, .convidado-principal.primario, .convidado-principal.secundario {
+		display: none;
+	}
+
+	.footer-texto a.primario {
+		text-align: center;
+		border: none;
+	}
+
+	#cabecalho-info a {
+	display: none;
+	}
+
+	.titulo.secundario {
+	font-size: 3rem;
+    font-weight: 300;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+	}
+
+	.titulo {
+	font-size: 3.5rem;
+	text-align: center;
+    font-weight: 300;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+	}
+
+	.nav-item.ultimo {
+		margin-left: 1.2rem;
+	}
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) { 
+	.convidado, .convidados, .convidado-principal, .convidado-principal.primario, .convidado-principal.secundario {
+		display: none;
+	}
+
+	.footer-texto a.primario {
+		text-align: center;
+		border: none;
+	}
+
+	#cabecalho-info a {
+		display: none;
+	}
+
+	.titulo {
+	z-index: 998;
+	font-size: 3.5rem;
+	text-align: center;
+    font-weight: 300;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+	}
+
+	.titulo.secundario {
+	font-size: 3rem;
+    font-weight: 300;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+	}
+
+	.nav-item.ultimo {
+		margin-left: 1.2rem;
+	}
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) { 
+	.convidado, .convidados, .convidado-principal.primario {
+		display: none;
+	}
+
+	.convidado-principal.secundario {
+		display: inline;
+	}
+
+	#formulario input::placeholder {
+	font-size: 1em;
+	text-align: center;
+	color: white;
+	}
+
+	#formulario textarea::placeholder {
+	font-size: 1.2em;
+	color: white;
+	}
+
+	.footer-texto a.primario {
+		border-right: 1px solid white;
+	}
+
+	.titulo {
+	font-size: 3.5rem;
+	text-align: center;
+    font-weight: 300;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+	}
+
+	.nav-item.ultimo {
+		margin-left: 1.2rem;
+	}
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+	.convidado-principal.secundario, .footer-texto {
+		display: none;
+	}
+
+	.footer-texto {
+		margin-right: 1em;
+	}
+
+	#formulario input::placeholder {
+	font-size: 1.3em;
+	text-align: center;
+	color: white;
+	}
+
+	#formulario textarea::placeholder {
+	font-size: 1.5em;
+	color: white;
+	}
+
+	#nav-principal a {
+		font-size: 0.75em;
+	}
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+	.convidado-principal.secundario {
+		display: none;
+	}
+
+	#formulario input::placeholder {
+	font-size: 1.3em;
+	text-align: center;
+	color: white;
+	}
+
+	#formulario textarea::placeholder {
+	font-size: 1.5em;
+	color: white;
+	}
+
+	.footer-texto a.primario {
+		border-right: 1px solid white;
+	}
+
+	#info-rodape a.secundario {
+		display: none;
+	}
+}
+
+
+/* Fontes */
+
+@font-face {
+    font-family: 'Gill Sans MT';
+    src: url('../fonts/GillSansMT.woff2') format('woff2'),
+        url('../fonts/GillSansMT.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GloberW01';
+    src: url('../fonts/GloberW01-Light.woff2') format('woff2'),
+        url('../fonts/GloberW01-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* AJUSTES GERAIS */
+
+html {
+	scroll-behavior: smooth;
+}
+
+body * {
+	overflow: hidden;
+}
+
+body {
+	background-color: black;
+	font-family: "Gill Sans MT";
+	color: white;
+	overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: white;
+  outline: 1px solid white;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.form-control:focus {
+	border-color: rgba(255, 255, 255, 0.8);
+  	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.875) inset, 0 0 8px rgba(255, 255, 255, 0.9);
+  	outline: 0 none;
+}
+
+.fonte-alternativa {
+	font-family: "GloberW01";
+}
+
+.botao {
+	padding: 0.3em 2.3em;
+	text-align: center;
+	font-size: 1.3em;
+	text-decoration: none;
+	color: white;
+	background-color: #c11e49;
+	transition: 0.3s;
+}
+
+.titulo {
+	font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+
+.divisoria {
+	opacity: 0.5;
+}
+
+/* TOPO */
+
+#cabecalho-navegacao {
+	z-index: 9999;
+	font-size: 1.4em;
+	background-color: #c11e49;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+#topo {
+	position: sticky;
+	z-index: 9999;
+	top: -7.9em;
+}
+
+.cursor-ponteiro {
+	cursor: pointer;
+}
+
+.borda-botao-insta {
+	border: 1px solid white;
+}
+
+.borda-especial {
+	border: 1px solid black;
+}
+
+#cabecalho-info a {
+	text-decoration: none;
+	color: white;
+}
+
+#cabecalho-info a:hover {
+	color: #dbdbdb;
+}
+
+/* BARRA DE NAVEGAÇÃO */
+
+#nav-principal li:hover {
+	background-color: #ea3d73;
+}
+
+#nav-principal li:active {
+	background-color: #821a44;
+}
+
+#nav-principal li {
+	transition: 0.3s;
+	padding: 5px;
+}
+
+#home {
+	background: url(../img/background2.png);
+	z-index: 0;
+}
+
+.container-cima {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+/* EVENTO PRINCIPAL */
+
+div.evento-principal h1{
+	font-size: 2.5em;
+	word-spacing: 2px;
+}
+
+div.evento-principal h4 {
+	font-size: 1.4em;
+}
+
+div.evento-principal h4 a {
+	color: #c11e49;
+	text-decoration: none;
+}
+
+div.evento-principal h4 a:hover {
+	color: #951638;
+}
+
+div.evento-principal h5 {
+	font-size: 1.3em;
+	word-spacing: 3px;
+}
+
+div.evento-principal span.convidado-principal {
+	font-family: Gill Sans MT;
+	font-size: 3em;
+	text-transform: uppercase;
+	margin-right: 0.5em;
+}
+
+div.evento-principal span.convidado {
+	font-family: Gill Sans MT;
+	font-size: 1.8em;
+	margin-right: 0.5em;
+}
+
+/* EVENTO SECUNDARIO */
+
+div.eventos-secundarios h4 {
+	font-size: 1.5em;
+	margin-bottom: 0.6em;
+}
+
+div.eventos-secundarios h1 {
+	font-size: 3em;
+	text-indent: 0.2em;
+	padding: 0.2em;
+	background-color: rgba(193, 30, 73, 0.25);
+	margin-bottom: 0.7em;
+}
+
+div.eventos-secundarios h3.convidado-principal {
+	font-family: Gill Sans MT;
+	text-transform: uppercase;
+	font-size: 2.3em;
+}
+
+div.eventos-secundarios div.convidados {
+	font-family: Gill Sans MT;
+	font-size: 1em;
+}
+
+/* INFO PROXIMOS EVENTOS */
+
+#info-proximos-eventos h1 a {
+	color: #c11e49;
+	text-decoration: none;
+}
+
+#info-proximos-eventos h1 a:hover {
+	color: #951638;
+}
+
+#info-proximos-eventos h4 {
+	font-family: GloberW01;
+	font-size: 1.5em;
+}
+
+/* NOSSA HISTORIA */
+
+#imagem-historia {
+	z-index: 1;
+	top: 138.5em;
+	height: 91%;
+	opacity: 70%;
+}
+
+#titulo-historia {
+	z-index: 3;
+}
+
+#texto-historia {
+	z-index: 2;
+	padding: 1em;
+	border-radius: 25px;
+	background-color: rgba(0,0,0,0.7);
+}
+
+#texto-historia p {
+	font-size: 1.3em;
+}
+
+#texto-historia p.ultimo-paragrafo {
+	margin-bottom: 0;
+}
+
+/* O ESPAÇO */
+
+#info-camarote h1 {
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 2.5em;
+	margin-bottom: 0.9em
+}
+
+#info-camarote div.camarote {
+	font-family: GloberW01;
+	font-size: 0.2em;
+	background-color: rgba(193, 30, 73, 0.5);
+	padding: 5em;
+	margin: 12em;
+}
+
+#aniversariantes h1 {
+	text-transform: uppercase;
+	font-size: 2.5em;
+	margin-bottom: 0.7em;
+}
+
+#aniversariantes h2 {
+	font-family: GloberW01;
+	font-size: 1.5em;
+	margin-bottom: 0.7em;
+}
+
+#aniversariantes a.botao:hover {
+	background-color: #ea3d73;
+	text-decoration: none;
+	color: white;
+}
+
+#aniversariantes a.botao:active {
+	background-color: #821a44;
+	text-decoration: none;
+	color: white;
+}
+
+/* FALE COM A GENTE */
+
+#fale-conosco h1.titulo {
+	margin-bottom: 0.2em;
+}
+
+#fale-conosco h2 {
+	font-family: GloberW01;
+	font-size: 1.4em;
+	margin-bottom: 1.5em;
+}
+
+#formulario input, #formulario select, #formulario textarea {
+	font-size: 1.3em;
+	height: 2.3em;
+	border-radius: 0;
+	border: 1px solid white;
+	background: transparent;
+	margin: 0 1em 1em 0;
+	color: white;
+}
+
+#formulario #nome {
+	margin-top: 0.5em;
+}
+
+#formulario select option {
+	text-align: center;
+	color: white;
+	background-color: #1F1829;
+}
+
+#formulario #uf {
+	text-transform: uppercase;
+}
+
+#formulario input[type="date"] {
+	background-color: transparent;
+}
+
+#formulario input[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+#formulario input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+#formulario textarea {
+	height: 10em;
+	resize: none;
+	overflow: auto;
+}
+
+#formulario textarea::-webkit-scrollbar {
+	width: 0.2em;
+}
+
+#formulario textarea::-webkit-scrollbar-thumb {
+	background-color: white;
+	outline: 1px solid white;
+}
+
+#formulario input#enviar, #formulario input#limpar {
+	padding: 0.3em 2.3em;
+	text-align: center;
+	font-size: 1.3em;
+	text-decoration: none;
+	border: none;
+	cursor: pointer;
+	color: white;
+	background-color: #c11e49;
+	transition: 0.3s;
+}
+
+#formulario input#limpar {
+	background-color: #757575;
+}
+
+#formulario input#enviar:hover {
+	background-color: #ea3d73;
+}
+
+#formulario input#limpar:hover {
+	background-color: #9b9b9b;
+}
+
+#formulario input#enviar:active {
+	background-color: #821a44;
+	outline: none;
+}
+
+#formulario input#limpar:active {
+	background-color: #5e5e5e;
+}
+
+#mapa h2 {
+	font-family: Gill Sans MT;
+	margin-bottom: 0.3em;
+	text-transform: uppercase;
+	font-size: 1.3em;
+}
+
+/* RODAPÉ */
+
+footer {
+	margin-top: 5em;
+	text-align: center;
+	padding: 2em 2em 1em 2em;
+	background-color: rgba(193, 30, 73, 0.3);
+}
+
+footer a, footer h4 {
+	color: white;
+	text-decoration: none;
+	font-size: 1.3em; 
+}
+
+footer a:hover {
+	text-decoration: none;
+	color: #dbdbdb;
+}
+
+footer a.footer-insta {
+	margin-left: 2em;
+	margin-right: 0.5em;
+	margin-top: 0.8em;
+	margin-bottom: 0.5em;
+}
+
+footer a.footer-facebook {
+	margin-right: 2em;
+	margin-left: 0.5em;
+	margin-top: 0.8em;
+	margin-bottom: 0.5em;
+}
+
+footer div.footer-texto {
+	margin-top: 1.8em;
+	margin-bottom: 0.5em;
+}

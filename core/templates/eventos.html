@@ -1,0 +1,94 @@
+{% load static %}
+<div id="jump-agenda" class="container">
+    		<div class="row">
+    			<div class="col-md-12 col-lg-6">
+    				<p class="titulo secundario mt-5">Próximos Eventos</p>
+    			</div>
+    		</div>
+
+			{% for e in eventos %}
+			{% if e.principal %}
+    		<div class="row evento-principal mb-5"><!-- INICIO Evento Principal -->
+    			<div class="col-sm-12 col-md-5 fonte-alternativa">
+    				<img class="img-fluid" src="{{ e.imagem.url }}" width="100%">
+    				<h4 class="text-center mt-3">Garanta seu ingresso <a href="e.link">aqui</a></h4>
+    				<span class="convidado-principal secundario">AAAAAAAAAAAAAA</span>
+    			</div>
+
+    			<div class="col-sm-12 col-md-7">
+    				<div class="ml-3 fonte-alternativa">
+    					<h1 class="d-inline evento-principal">{{ e.nomeEvento }}</h1>
+    					<h4 class="text-right d-inline ml-4 evento-principal">{{ e.dataEvento }}</h4>
+    					<h5 class="mt-4 mb-4 evento-principal">{{ e.descricao }}</h5>
+    					{% for a in artistas %}
+							{% if a.evento == e %}
+								{% if a.principal %}
+									<span class="convidado-principal primario ">{{ a.nome }}</span>
+								{% else %}
+									<span class="convidado">{{ a.nome }}</span>
+								{% endif %}
+							{% endif %}
+						{% endfor %}
+    				</div>
+    			</div>
+    		</div><!-- FIM Evento Principal -->
+			{% endif %}
+			{% endfor %}
+
+    		<div class="d-flex justify-content-around row eventos-secundarios fonte-alternativa mb-5"><!-- INICIO Eventos Secundários -->
+
+				{% for e in eventos %}
+				{% if not e.principal %}
+
+				<div class="col-sm-6 col-md-5 col-lg-4"><!-- INICIO Evento 1 Secundário -->
+    				<h4>{{ e.dataEvento }}</h4>
+    				<img  class="img-fluid" src="{{ e.imagem.url }}" width="100%">
+    				<h1>{{ e.nomeEvento }}</h1>
+					{% for a in artistas %}
+						{% if a.evento == e %}
+							{% if a.principal %}
+    							<h3 class="convidado-principal">{{ a.nome }}</h3>
+							{% endif %}
+						{% endif %}
+					{% endfor %}
+
+    				<div class="convidados row"><!-- INICIO Lista Convidados -->
+
+						<div class="col-sm-6"> <!-- Artistas Esquerda -->
+							{% for a in artistas %}
+								{% if a.evento == e %}
+									{% if not a.principal %}
+										{% if a.posicao == 'Esquerda' %}
+											<h3 class="">{{ a.nome }}</h3>
+										{% endif %}
+									{% endif %}
+								{% endif %}
+							{% endfor %}
+						</div>
+
+						<div class="col-sm-6"> <!-- Artistas Direita -->
+							{% for a in artistas %}
+								{% if a.evento == e %}
+									{% if not a.principal %}
+										{% if a.posicao == 'Direita' %}
+											<h3 class="ml-auto">{{ a.nome }}</h3>
+										{% endif %}
+									{% endif %}
+								{% endif %}
+							{% endfor %}
+						</div>
+					</div><!-- FIM Lista Convidados -->
+				</div><!-- FIM Evento 1 Secundário -->
+				{% endif %}
+				{% endfor %}
+    		</div> <!-- FIM Eventos Secundários -->
+
+    		<div id="info-proximos-eventos" class="mb-5">
+    			<h1 class="mb-4">Agende seu evento conosco <a href="">agora mesmo</a>!</h1>
+    			<h4>Eventos proibidos para menores de 18 anos.</h4>
+    			<h4>Valores sujeitos à alteração sem aviso prévio de acordo com a lotação da casa. Se beber, não dirija.</h4>
+    		</div>
+
+    		<img src="{% static 'img/divisoria.png' %}" class="divisoria d-none d-lg-block ml-auto mr-auto mt-5 mb-5">
+
+    	</div>
